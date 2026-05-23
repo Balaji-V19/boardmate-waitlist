@@ -1,0 +1,26 @@
+{
+  "name": "boardmate-waitlist",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "convert-videos": "bash ./scripts/convert-videos.sh"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "firebase-admin": "12.5.0",
+    "canvas-confetti": "1.9.3"
+  },
+  "devDependencies": {
+    "typescript": "5.6.2",
+    "@types/node": "20.16.5",
+    "@types/react": "18.3.5",
+    "@types/react-dom": "18.3.0",
+    "@types/canvas-confetti": "1.6.4"
+  }
+}

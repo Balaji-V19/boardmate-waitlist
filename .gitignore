@@ -1,0 +1,39 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next
+.next/
+out/
+build/
+dist/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# env / secrets — NEVER commit these
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.production.local
+.secrets/
+secrets/
+
+# Firebase service-account private keys — every filename pattern they ship with
+firebase-admin*.json
+firebase-service-account*.json
+service-account*.json
+serviceAccount*.json
+*-firebase-adminsdk-*.json
+*private-key*.json
+google-credentials*.json
+google-service-account*.json
+
+# misc
+.DS_Store
+*.log
+.idea/
+.vscode/

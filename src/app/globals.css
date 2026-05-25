@@ -379,6 +379,21 @@ input { font-family: inherit; }
   width: 100%; height: 100%;
   object-fit: cover;
 }
+/* Decorative loops — never show native controls / tap-to-play chrome */
+.mascot-video,
+.showcase-video video,
+.join-mascot video,
+.success-mascot video,
+.phone-bubble-mascot video {
+  pointer-events: none;
+}
+.mascot-video::-webkit-media-controls,
+.showcase-video video::-webkit-media-controls,
+.join-mascot video::-webkit-media-controls,
+.success-mascot video::-webkit-media-controls,
+.phone-bubble-mascot video::-webkit-media-controls {
+  display: none !important;
+}
 .ring-glow {
   position: absolute;
   inset: -20px;

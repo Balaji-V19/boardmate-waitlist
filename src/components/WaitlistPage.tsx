@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import confetti from 'canvas-confetti';
 import Badge from './Badge';
+import MascotVideo from './MascotVideo';
 import RuleCardCarousel from './RuleCardCarousel';
 import PhoneAppPreview from './PhoneAppPreview';
 
@@ -290,18 +291,12 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
 
             <div className="hero-mascot reveal" data-tilt>
               <div className="mascot-ring">
-                <video
+                <MascotVideo
                   className="mascot-video"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  aria-label="BoardMate mascot waving hello"
-                >
-                  <source src="/assets/videos/welcome.webm" type="video/webm" />
-                  <source src="/assets/videos/welcome.mp4" type="video/mp4" />
-                </video>
+                  webm="/assets/videos/welcome.webm"
+                  mp4="/assets/videos/welcome.mp4"
+                  ariaLabel="BoardMate mascot waving hello"
+                />
               </div>
               <div className="ring-glow" aria-hidden="true" />
             </div>
@@ -360,10 +355,12 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
           <div className="container">
             <div className="showcase-row reverse reveal">
               <div className="showcase-video">
-                <video autoPlay loop muted playsInline preload="metadata" aria-label="Mascot teaching">
-                  <source src="/assets/videos/teaching.webm" type="video/webm" />
-                  <source src="/assets/videos/teaching.mp4" type="video/mp4" />
-                </video>
+                <MascotVideo
+                  webm="/assets/videos/teaching.webm"
+                  mp4="/assets/videos/teaching.mp4"
+                  ariaLabel="Mascot teaching"
+                  playWhenVisible
+                />
               </div>
               <div className="showcase-copy">
                 <Badge variant="tag">Like a friend who knows the rules</Badge>
@@ -374,10 +371,12 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
 
             <div className="showcase-row reveal">
               <div className="showcase-video">
-                <video autoPlay loop muted playsInline preload="metadata" aria-label="Mascot thinking">
-                  <source src="/assets/videos/thinking.webm" type="video/webm" />
-                  <source src="/assets/videos/thinking.mp4" type="video/mp4" />
-                </video>
+                <MascotVideo
+                  webm="/assets/videos/thinking.webm"
+                  mp4="/assets/videos/thinking.mp4"
+                  ariaLabel="Mascot thinking"
+                  playWhenVisible
+                />
               </div>
               <div className="showcase-copy">
                 <Badge variant="tag">Always at the table</Badge>
@@ -434,10 +433,12 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
           <div className="container narrow">
             <div className="join-card reveal">
               <div className="join-mascot" data-tilt>
-                <video autoPlay loop muted playsInline preload="metadata" aria-label="Mascot welcoming you">
-                  <source src="/assets/videos/welcome.webm" type="video/webm" />
-                  <source src="/assets/videos/welcome.mp4" type="video/mp4" />
-                </video>
+                <MascotVideo
+                  webm="/assets/videos/welcome.webm"
+                  mp4="/assets/videos/welcome.mp4"
+                  ariaLabel="Mascot welcoming you"
+                  playWhenVisible
+                />
               </div>
               <h2 className="t-screen">Join the waitlist.</h2>
               <p className="t-body">Be first to learn games the friendly way.</p>
@@ -479,10 +480,12 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
               &times;
             </button>
             <div className="success-mascot">
-              <video autoPlay loop muted playsInline preload="metadata" aria-label="Mascot celebrating">
-                <source src="/assets/videos/celebrating.webm" type="video/webm" />
-                <source src="/assets/videos/celebrating.mp4" type="video/mp4" />
-              </video>
+              <MascotVideo
+                webm="/assets/videos/celebrating.webm"
+                mp4="/assets/videos/celebrating.mp4"
+                ariaLabel="Mascot celebrating"
+                active={success.open}
+              />
             </div>
             <Badge variant="tag">You&apos;re in!</Badge>
             <h2 className="t-screen">

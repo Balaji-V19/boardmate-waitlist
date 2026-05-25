@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { CATAN_TURN_FLOW, type TurnPhase, type TurnPhaseIcon } from '@/lib/games';
 import Badge from './Badge';
+import MascotVideo from './MascotVideo';
 
 const PHASE_MS = 3600;
 
@@ -94,10 +95,12 @@ export default function PhoneAppPreview() {
 
                 <div className="phone-bubble" key={phase.order}>
                   <div className="phone-bubble-mascot">
-                    <video autoPlay loop muted playsInline preload="metadata">
-                      <source src="/assets/videos/thinking.webm" type="video/webm" />
-                      <source src="/assets/videos/thinking.mp4" type="video/mp4" />
-                    </video>
+                    <MascotVideo
+                      webm="/assets/videos/thinking.webm"
+                      mp4="/assets/videos/thinking.mp4"
+                      ariaLabel="Mascot thinking"
+                      playWhenVisible
+                    />
                   </div>
                   <div className="phone-bubble-text">
                     <strong>Phase {phase.order} — {phase.name}.</strong>{' '}

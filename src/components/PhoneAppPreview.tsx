@@ -46,10 +46,10 @@ export default function PhoneAppPreview() {
     <section className="section setup-demo">
       <div className="container setup-grid">
         <div className="setup-copy reveal">
-          <Badge variant="section" number="04">A TURN IN CATAN</Badge>
-          <h2 className="t-screen">Every turn, broken down.</h2>
+          <Badge variant="section" number="04">Turn flow</Badge>
+          <h2 className="t-screen">See one turn, step by step</h2>
           <p className="t-body">
-            Inside BoardMate, every turn is a short flow you can follow at the table. Here&apos;s a peek of what a Catan turn looks like in the app:
+            Here&apos;s what a Catan turn looks like inside BoardMate. Three phases, tap through each one.
           </p>
 
           <ol className="setup-steps">
@@ -90,7 +90,7 @@ export default function PhoneAppPreview() {
               <div className="phone-tf-body">
                 <span className="phone-tf-label">A TURN IN CATAN</span>
                 <h4 className="phone-tf-headline">
-                  Every turn flows in <span className="accent">3 steps.</span>
+                  Three steps <span className="accent">per turn.</span>
                 </h4>
 
                 <div className="phone-bubble" key={phase.order}>
@@ -103,7 +103,7 @@ export default function PhoneAppPreview() {
                     />
                   </div>
                   <div className="phone-bubble-text">
-                    <strong>Phase {phase.order} — {phase.name}.</strong>{' '}
+                    <strong>Phase {phase.order} · {phase.name}.</strong>{' '}
                     {phase.description}
                   </div>
                 </div>

@@ -15,10 +15,10 @@ export default function RuleCardCarousel() {
     <section className="section rule-cards">
       <div className="container">
         <div className="section-head reveal">
-          <Badge variant="section" number="03">SNEAK PEEK</Badge>
-          <h2 className="t-screen">Rules, made friendly.</h2>
+          <Badge variant="section" number="03">Sneak peek</Badge>
+          <h2 className="t-screen">How we explain a game</h2>
           <p className="t-body lede">
-            Tap any card to see how BoardMate explains the goal of the game — short, plain, ready for the table.
+            Flip a card. That&apos;s roughly what the goal screen looks like in the app.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ function RuleCard({ game }: { game: GameTeaser }) {
           <h3 className="t-card">{game.name}</h3>
           <p className="t-helper">{game.oneLine}</p>
           <span className="rule-card-cta">
-            <span>Tap to see the goal</span>
+            <span>See the goal</span>
             <ArrowIcon />
           </span>
         </div>
@@ -70,7 +70,7 @@ function RuleCard({ game }: { game: GameTeaser }) {
           <span className="rule-card-back-eyebrow t-label">The goal</span>
           <p className="t-body rule-card-objective">{game.objective}</p>
           <span className="rule-card-cta">
-            <span>Flip back</span>
+            <span>Back</span>
             <ArrowIcon flip />
           </span>
         </div>

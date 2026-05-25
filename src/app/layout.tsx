@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'BoardMate — Learn any board game, the friendly way.',
+  title: 'BoardMate | Learn board games at the table',
   description:
-    'BoardMate is your warm, patient board game teacher. Setup guides, clear rules, and a quick reference for table-side lookups. Join the waitlist.',
+    'Setup guides, turn-by-turn help, and quick rule lookups while you play. Join the BoardMate beta waitlist.',
   openGraph: {
-    title: 'BoardMate — Learn any board game, the friendly way.',
+    title: 'BoardMate | Learn board games at the table',
     description:
-      'Your warm, patient board game teacher. Setup, rules, and quick references for table-side play. Join the waitlist.',
+      'Learn new board games by playing through setup and each turn. Quick rules when you need them. Join the beta waitlist.',
     type: 'website',
     images: ['/assets/logo.png'],
   },

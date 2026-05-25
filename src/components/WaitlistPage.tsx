@@ -222,7 +222,7 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
   const closeSuccess = () => setSuccess((s) => ({ ...s, open: false }));
 
   /* ---------- Share ---------- */
-  const shareText = `I just joined the BoardMate waitlist — your AI-friendly board game teacher. ${SITE_URL}`;
+  const shareText = `I signed up for BoardMate's beta. It helps you learn board games at the table. ${SITE_URL}`;
   const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
   const waHref = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
@@ -255,7 +255,7 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
           <img src="/assets/logo.png" alt="BoardMate logo" width={36} height={36} />
           <span className="brand-word">BoardMate</span>
         </a>
-        <a className="nav-cta" href="#join">Join the waitlist</a>
+        <a className="nav-cta" href="#join">Join waitlist</a>
       </header>
 
       <main id="top">
@@ -264,18 +264,18 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
         <section className="hero">
           <div className="hero-inner">
             <div className="hero-copy reveal">
-              <Badge variant="stamp">Early access · Coming soon</Badge>
+              <Badge variant="stamp">Early beta · waitlist open</Badge>
               <h1 className="t-display">
-                Learn any board game,
+                Learn board games
                 <br />
-                <span className="accent">the friendly way.</span>
+                <span className="accent">by playing through them.</span>
               </h1>
               <p className="t-body lede">
-                BoardMate is your warm, patient board game teacher — no rulebook hunting, just clear, friendly steps you can follow at the table.
+                BoardMate walks you through setup, rules, and each turn while you&apos;re at the table. Tap through the game instead of flipping through a rulebook.
               </p>
 
               <SignupForm
-                buttonLabel="Join the waitlist"
+                buttonLabel="Join waitlist"
                 onSuccess={({ position, alreadyJoined }) => {
                   setCount(position);
                   setSuccess({ open: true, position, alreadyJoined });
@@ -285,7 +285,7 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
 
               <p className="counter-line t-helper">
                 <span className="dot" />
-                <strong ref={registerCounter}>{count.toLocaleString()}</strong> friends already waiting
+                <strong ref={registerCounter}>{count.toLocaleString()}</strong> on the waitlist so far
               </p>
             </div>
 
@@ -307,8 +307,8 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
         <section className="section features">
           <div className="container">
             <div className="section-head reveal">
-              <Badge variant="section" number="01">What you&apos;ll get</Badge>
-              <h2 className="t-screen">Everything a board game night needs.</h2>
+              <Badge variant="section" number="01">In the app</Badge>
+              <h2 className="t-screen">Built for game night, not bedtime reading.</h2>
             </div>
 
             <div className="feature-grid">
@@ -319,8 +319,8 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
                     <path d="m20 20-3.5-3.5" />
                   </svg>
                 </div>
-                <h3 className="t-card">Find your next game</h3>
-                <p className="t-body">Browse dozens of games by category, players, time, or difficulty in seconds.</p>
+                <h3 className="t-card">Pick a game</h3>
+                <p className="t-body">Filter by players, play time, or how heavy the rules are. Find something that fits your group.</p>
               </article>
 
               <article className="card reveal">
@@ -332,8 +332,8 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
                     <path d="M14 17.5h7M17.5 14v7" />
                   </svg>
                 </div>
-                <h3 className="t-card">Set up the table</h3>
-                <p className="t-body">Tappable step-by-step setup so the board is ready in minutes — not chapters.</p>
+                <h3 className="t-card">Set up without the manual</h3>
+                <p className="t-body">Step-by-step setup on your phone. Board on the table, not a PDF on the couch.</p>
               </article>
 
               <article className="card reveal">
@@ -343,8 +343,8 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
                   </svg>
                 </div>
-                <h3 className="t-card">Quick rules at the table</h3>
-                <p className="t-body">Tap-to-reveal rules and a quick reference for fast lookups when you forget a thing.</p>
+                <h3 className="t-card">Rules when you need them</h3>
+                <p className="t-body">Quick lookups for scoring, edge cases, and that one rule everyone always forgets.</p>
               </article>
             </div>
           </div>
@@ -363,9 +363,9 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
                 />
               </div>
               <div className="showcase-copy">
-                <Badge variant="tag">Like a friend who knows the rules</Badge>
-                <h3 className="t-screen">Skip the 40-page rulebook.</h3>
-                <p className="t-body">BoardMate explains as you go, in plain language — perfect for game nights with new players.</p>
+                <Badge variant="tag">Learn by doing</Badge>
+                <h3 className="t-screen">Play your first turn, not page forty.</h3>
+                <p className="t-body">Walk through each phase on your phone. Handy when someone&apos;s teaching the game and you want to follow along.</p>
               </div>
             </div>
 
@@ -379,9 +379,9 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
                 />
               </div>
               <div className="showcase-copy">
-                <Badge variant="tag">Always at the table</Badge>
-                <h3 className="t-screen">Save games for offline.</h3>
-                <p className="t-body">The cheat sheet works even when the wifi doesn&apos;t show up to the party.</p>
+                <Badge variant="tag">Offline</Badge>
+                <h3 className="t-screen">Saved for the basement.</h3>
+                <p className="t-body">Download a game and its guides. Useful when the wifi dies mid-game.</p>
               </div>
             </div>
           </div>
@@ -400,8 +400,8 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
               <span ref={counterBigRef}>0</span>
               <span className="counter-plus">+</span>
             </div>
-            <p className="t-section">board game lovers already on the list.</p>
-            <a className="btn-ghost" href="#join">Get your spot →</a>
+            <p className="t-section">signed up for early access.</p>
+            <a className="btn-ghost" href="#join">Get on the list →</a>
           </div>
         </section>
 
@@ -410,20 +410,20 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
           <div className="container narrow">
             <div className="section-head reveal">
               <Badge variant="section" number="05">FAQ</Badge>
-              <h2 className="t-screen">Quick answers.</h2>
+              <h2 className="t-screen">Questions</h2>
             </div>
 
-            <FaqItem q="When does BoardMate launch?">
-              We&apos;re polishing the first batch of games right now. Waitlist members get early access before the public launch.
+            <FaqItem q="When can I try it?">
+              We&apos;re getting a small beta ready now. Waitlist signups get invited before we open it up wider.
             </FaqItem>
             <FaqItem q="Is it free?">
-              Yes — the core experience is free. Power features like extra offline space may come later, but the friendly teacher stays free.
+              Yes, completely free. No paid features, no paywall. BoardMate is free for everyone.
             </FaqItem>
-            <FaqItem q="Which games are included?">
-              We&apos;re starting with the most-loved family, strategy, party, and card games. Waitlist members can request games they&apos;d like to see first.
+            <FaqItem q="Which games are in the beta?">
+              We&apos;re starting with popular family, strategy, party, and card games. Tell us what you want on the waitlist and we&apos;ll prioritize it.
             </FaqItem>
-            <FaqItem q="What happens to my email?">
-              We store it securely to send you one launch email and (if you opt in later) the occasional update. No selling, no spam. Ever.
+            <FaqItem q="What do you do with my email?">
+              We use it to send your beta invite and maybe a short update now and then. We don&apos;t sell it or hand it to marketers.
             </FaqItem>
           </div>
         </section>
@@ -440,8 +440,8 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
                   playWhenVisible
                 />
               </div>
-              <h2 className="t-screen">Join the waitlist.</h2>
-              <p className="t-body">Be first to learn games the friendly way.</p>
+              <h2 className="t-screen">Get early access</h2>
+              <p className="t-body">We&apos;re opening a small beta soon. Drop your email and we&apos;ll send an invite when your spot&apos;s ready.</p>
 
               <SignupForm
                 buttonLabel="Save my spot"
@@ -454,7 +454,7 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
 
               <p className="counter-line t-helper">
                 <span className="dot" />
-                <strong ref={registerCounter}>{count.toLocaleString()}</strong> friends already waiting
+                <strong ref={registerCounter}>{count.toLocaleString()}</strong> on the waitlist so far
               </p>
             </div>
           </div>
@@ -487,14 +487,14 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
                 active={success.open}
               />
             </div>
-            <Badge variant="tag">You&apos;re in!</Badge>
+            <Badge variant="tag">You&apos;re on the list</Badge>
             <h2 className="t-screen">
-              You&apos;re <span className="accent">#{success.position?.toLocaleString() ?? '—'}</span> on the list.
+              Spot <span className="accent">#{success.position?.toLocaleString() ?? '…'}</span>
             </h2>
             <p className="t-body">
               {success.alreadyJoined
-                ? "You're already on the list — we'll be in touch when BoardMate is ready."
-                : "We'll send a friendly note when BoardMate is ready for you."}
+                ? "Looks like you signed up already. We'll email you when the beta opens."
+                : "We'll email you when your beta invite is ready."}
             </p>
 
             <div className="share-row">
@@ -533,7 +533,7 @@ export default function WaitlistPage({ initialCount }: { initialCount: number })
             <img src="/assets/logo.png" alt="" width={28} height={28} />
             <span>BoardMate</span>
           </div>
-          <p className="t-helper">Made with love for game nights.</p>
+          <p className="t-helper">For people who&apos;d rather play than read rulebooks.</p>
         </div>
       </footer>
     </>
@@ -566,7 +566,7 @@ function SignupForm({
       return;
     }
     setState('loading');
-    setMsg({ text: 'Saving your spot…', kind: 'info' });
+    setMsg({ text: 'Adding you to the list…', kind: 'info' });
 
     try {
       const res = await fetch('/api/waitlist', {
@@ -593,8 +593,8 @@ function SignupForm({
       setState('ok');
       setMsg({
         text: data.alreadyJoined
-          ? "You're already on the list!"
-          : "You're in! Check your email when we launch.",
+          ? 'You were already on the list.'
+          : "You're on the list. Watch your inbox for the beta invite.",
         kind: 'ok',
       });
       setEmail('');
@@ -625,7 +625,7 @@ function SignupForm({
           type="email"
           inputMode="email"
           autoComplete="email"
-          placeholder="your@email.com"
+          placeholder="you@email.com"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
